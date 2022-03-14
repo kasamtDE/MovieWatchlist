@@ -1,0 +1,118 @@
+.result-cart-container{
+    padding: 2rem;
+    padding-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    img{
+        width: 100%;
+    }
+    .result-image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-container{
+        max-width: 250px;
+        position: relative;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+
+        &:hover .image-overlay{
+            bottom: 0;
+
+        }
+        .delete-button {
+            visibility: hidden;
+        }
+        &:hover .delete-button{
+            visibility: visible;
+            top: 0;
+            right: 0;
+            height: 35px;
+            background: rgb(197, 0, 0);
+        }
+
+    }
+    .title{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .release-date{
+        margin-bottom: 1.5rem;
+    }
+    .image-overlay{
+        transition: all 0.15s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        button{
+            position: absolute;
+            bottom: 5px;
+            background-color: #0d0080;
+            color: white;
+            padding: 0.5rem;
+            border: none;
+           &:disabled{
+               background-color: #21a700;
+           } 
+        }
+        .watchlist-button{
+            left:0;
+        }
+        .watched-button{
+            right:0;
+        }
+    }
+}
+.result-cart-container.watched-container,.result-cart-container.watchlist-container{
+    padding-top: 5rem;
+}
+.cart-empty{
+    padding-top: 10rem;
+    color: #0d0080;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.watched-movies-title,.watchlist-movies-title{
+    padding-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0d0080;
+}
+@media screen and (min-width:750px) {
+    .result-cart-container{
+        grid-template-columns: repeat(2,minmax(300px,450px));
+    }
+    .cart-empty{
+        font-size: 2rem;
+    }
+}
+@media screen and (min-width:1020px) {
+    .result-cart-container{
+        grid-template-columns: repeat(3,minmax(300px,450px));
+    }
+    .cart-empty{
+        font-size: 2.25rem;
+    }
+    
+}
+@media screen and (min-width:1320px) {
+    .result-cart-container{
+        grid-template-columns: repeat(4,minmax(250px,300px));
+    }
+    .cart-empty{
+        font-size: 2.5rem;
+    }
+}

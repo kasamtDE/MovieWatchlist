@@ -1,0 +1,112 @@
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #06003a;
+  padding: 1.5rem;
+  margin-bottom: 4rem;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+.navbar-container .navbar-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.navbar-container .navbar-right .add {
+  background-color: #21a700;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.navbar-container .navbar-right .menu-icon {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.navbar-container .navbar-right .menu-icon:hover {
+  cursor: pointer;
+}
+
+.navbar-container .navbar-right .menu-items {
+  display: none;
+}
+
+.navbar-container .navbar-right .menu-items.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 100px;
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: 100px;
+  bottom: 0px;
+  background-color: #060822;
+  font-size: 2rem;
+  z-index: 999;
+}
+
+.navbar-container .navbar-right .menu-items span:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 750px) {
+  .menu-icon {
+    visibility: hidden;
+  }
+  .navbar-container .navbar-right .menu-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .navbar-container .navbar-right .menu-items.open {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=Navbar.css.map */
